@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class TopMenu extends Component {
 
@@ -6,9 +7,9 @@ class TopMenu extends Component {
         return (
             <div className="ui menu">
                 <div className="header item">hello</div>
-                <a href="/" className="item">Home</a>
-                <a href="/" className="item">Projects</a>
-                <a href="/" className="item">About</a>
+                <Link to="/" className="item">Landing</Link>
+                <Link to="/projects" className="item">Projects</Link>
+                <Link to="/about" className="item">About</Link>
             </div>
         )
     }
