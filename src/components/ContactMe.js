@@ -1,16 +1,15 @@
 import React from "react";
-import LandingContent from "./LandingContent";
+import ContactContent from "./ContactContent";
 
-export default function Landing() {
+export default function AboutMe() {
     return (
         <div style={c1Style} className="page-container">
-            <LandingContent />
+            <ContactContent />
         </div>
     );
 }
 
 const c1Style = {
-    background: "steelblue",
-    color: "white",
+    background: "lightsalmon",
     padding: "1.5rem"
 }

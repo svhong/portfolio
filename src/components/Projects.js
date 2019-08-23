@@ -1,11 +1,16 @@
 import React from "react";
+import ProjectContent from "./ProjectContent"
 
-const Projects = () => {
+export default function Projects() {
     return (
-        <div className="page-margins">
-            Projects
+        <div style={c1Style} className="page-container">
+            <ProjectContent />
         </div>
-    )
+    );
 }
 
-export default Projects
+const c1Style = {
+    background: "springgreen",
+    padding: "1.5rem",
+    color: "white"
+}
