@@ -14,7 +14,6 @@ export default function ContactContent() {
                 <div style={props} className="page-content">
                     <h1>Contact</h1>
                     <p>Putting some stuff in here blah blah blah</p>
-
                 </div>
             )}
         </Spring>

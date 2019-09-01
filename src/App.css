@@ -17,6 +17,7 @@ body {
     padding: 2em;
     height: calc(100% - 3em);
     display: flex;
+    flex-direction: column;
 }
 
 .page-content {
@@ -25,4 +26,29 @@ body {
 
 .ui.menu {
     margin-bottom: 0;
+}
+
+.logo-container {
+    padding: 0 1em !important;
+}
+
+.logo-container > img {
+    height: 1.3em;
+    width: 1.3em !important;
+    display: inline-block !important;
+}
+
+
+.project-card {
+    height: 50%;
+    width: 25%;
+}
+
+.project-card > img {
+    height: 100%;
+}
+
+.book img {
+    height: 100% !important;
+    width: 100% !important;
 }
