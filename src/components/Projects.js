@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
-import ProjectBook from "./ProjectBook";
+
 
 export default class Projects extends Component {
     state = {
@@ -25,7 +25,7 @@ export default class Projects extends Component {
                 }}>
                 {props => (
                     <div style={props} className="page-content">
-                        <ProjectBook />
+                        Projects coming soon
                     </div>
                 )
                 }
