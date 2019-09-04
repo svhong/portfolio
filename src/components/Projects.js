@@ -1,35 +1,47 @@
 import React, { Component } from "react";
-import { Spring } from "react-spring/renderprops";
+import ProjectCard from "./ProjectCard";
 
 
 export default class Projects extends Component {
+    // Make content changes inside the state
+    //refactor with hooks?
     state = {
         projects: [
             {
                 ProjectTitle: "React Hook Blocks",
-                ProjectImageUrl: "",
-                ProjectDescription: "Describing the project here in detail",
-                ProjectTech: "These types of technologies were used"
-            }
+                ProjectImageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+                ProjectDescription: "Describing the project here in detail lots and lots and lotsand lotsand lotsand lotsand lotsand lotsand lots of detail",
+                ProjectTech: "These types of technologies were used",
+            },
+            {
+                ProjectTitle: "Personal Blog Editor",
+                ProjectImageUrl: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?cs=srgb&dl=architecture-buildings-city-325185.jpg&fm=jpg",
+                ProjectDescription: "Describing the project here in detail lots and lots and lotsand lotsand lotsand lotsand lotsand lotsand lots of detail",
+                ProjectTech: [],
+            },
+            {
+                ProjectTitle: "Personal Blog Editor",
+                ProjectImageUrl: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?cs=srgb&dl=architecture-buildings-city-325185.jpg&fm=jpg",
+                ProjectDescription: "Describing the project here in detail lots and lots and lotsand lotsand lotsand lotsand lotsand lotsand lots of detail",
+                ProjectTech: [],
+            },
+
+
         ]
     }
 
+
     render() {
+        const projects = this.state.projects.map((project, i) => (
+            <ProjectCard
+                projects={project}
+                key={i}
+            />
+        ))
         return (
-            <Spring
-                from={{ opacity: 0 }}
-                to={{ opacity: 1 }}
-                config={{
-                    delay: 100,
-                    duration: 500
-                }}>
-                {props => (
-                    <div style={props} className="page-content">
-                        Projects coming soon
-                    </div>
-                )
-                }
-            </Spring>
+            <div className="project-container">
+                {projects}
+            </div>
         );
     }
 }
