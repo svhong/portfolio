@@ -2,6 +2,29 @@ import React, { Component } from "react";
 import ProjectCard from "./ProjectCard";
 
 
+// importing the icons to put in state
+import reactIcon from "../images/react.png";
+import styledIcon from "../images/styledcomponents.png";
+import hooksIcon from "../images/hooks.png";
+import htmlIcon from "../images/html.png";
+import cssIcon from "../images/css.png";
+import laravelIcon from "../images/laravel.png";
+import bootstrapIcon from "../images/bootstrap.png";
+import phpIcon from "../images/php.png";
+import mysqlIcon from "../images/mysql.png";
+import nodeIcon from "../images/node.png";
+import expressIcon from "../images/express.png";
+import doIcon from "../images/do.png";
+import jsIcon from "../images/js.png";
+import wixIcon from "../images/wix.png";
+
+// importing images
+import blocksImage from "../images/blocks.PNG";
+import baconImage from "../images/bacon.PNG";
+import blogeditorImage from "../images/blogeditor.PNG";
+import poracImage from "../images/porac.PNG";
+import atosImage from "../images/atos.PNG";
+
 export default class Projects extends Component {
     // Make content changes inside the state
     //refactor with hooks?
@@ -9,33 +32,125 @@ export default class Projects extends Component {
         projects: [
             {
                 ProjectTitle: "React Hook Blocks",
-                ProjectImageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-                ProjectDescription: "Describing the project here in detail lots and lots and lotsand lotsand lotsand lotsand lotsand lotsand lots of detail",
-                ProjectTech: "These types of technologies were used",
-            },
-            {
-                ProjectTitle: "Personal Blog Editor",
-                ProjectImageUrl: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?cs=srgb&dl=architecture-buildings-city-325185.jpg&fm=jpg",
-                ProjectDescription: "Describing the project here in detail lots and lots and lotsand lotsand lotsand lotsand lotsand lotsand lots of detail",
-                ProjectTech: [],
-            },
-            {
-                ProjectTitle: "Personal Blog Editor",
-                ProjectImageUrl: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?cs=srgb&dl=architecture-buildings-city-325185.jpg&fm=jpg",
-                ProjectDescription: "Describing the project here in detail lots and lots and lotsand lotsand lotsand lotsand lotsand lotsand lots of detail",
-                ProjectTech: [],
-            },
+                ProjectImageUrl: `${blocksImage}`,
+                ProjectDescription: "A popular block game project to learn and understand the intricacies of React Hooks.",
+                ProjectTech: [
+                    {
+                        Name: "React Hooks",
+                        Image: `${hooksIcon}`
+                    },
+                    {
+                        Name: "ReactJS",
+                        Image: `${reactIcon}`
+                    },
+                    {
+                        Name: "Styled Components",
+                        Image: `${styledIcon}`
+                    }
 
+                ],
+            },
+            {
+                ProjectTitle: "Bacon API Delivery",
+                ProjectImageUrl: `${baconImage}`,
+                ProjectDescription: "A meaty lorem API delivery service with lightning fast delivery!",
+                ProjectTech: [
+                    {
+                        Name: "ReactJS",
+                        Image: `${reactIcon}`
+                    },
+                    {
+                        Name: "HTML5",
+                        Image: `${htmlIcon}`
+                    },
+                    {
+                        Name: "CSS3",
+                        Image: `${cssIcon}`
+                    },
+                ],
+            },
+            {
+                ProjectTitle: "Blog Editor",
+                ProjectImageUrl: `${blogeditorImage}`,
+                ProjectDescription: "A blog post editor where user can post and view their blog!",
+                ProjectTech: [
+                    {
+                        Name: "Laravel",
+                        Image: `${laravelIcon}`
+                    },
+                    {
+                        Name: "PHP7",
+                        Image: `${phpIcon}`
+                    },
+                    {
+                        Name: "MySQL DataBase",
+                        Image: `${mysqlIcon}`
+                    },
+                    {
+                        Name: "ReactJS",
+                        Image: `${reactIcon}`
+                    },
+                    {
+                        Name: "Bootstrap 4",
+                        Image: `${bootstrapIcon}`
+                    },
+                ],
+            }, {
+                ProjectTitle: "PORAC Insurance",
+                ProjectImageUrl: `${poracImage}`,
+                ProjectDescription: "Fully Responsive reboot of client's outdated website. Made with functional components and served with ExpressJS on Digital Ocean",
+                ProjectTech: [
+                    {
+                        Name: "React",
+                        Image: `${reactIcon}`
+                    },
+                    {
+                        Name: "Express",
+                        Image: `${expressIcon}`
+                    },
+                    {
+                        Name: "NodeJS",
+                        Image: `${nodeIcon}`
+                    },
+                    {
+                        Name: "Digital Ocean",
+                        Image: `${doIcon}`
+                    }
+                ],
+            },
+            {
+                ProjectTitle: "Atos Austin BJJ",
+                ProjectImageUrl: `${atosImage}`,
+                ProjectDescription: "Fully Responsive Client's website. With email blasting and clientele database management",
+                ProjectTech: [
+                    {
+                        Name: "Wix",
+                        Image: `${wixIcon}`
+                    },
+                    {
+                        Name: "Html5",
+                        Image: `${htmlIcon}`
+                    },
+                    {
+                        Name: "CSS3",
+                        Image: `${cssIcon}`
+                    },
+                    {
+                        Name: "JavaScript",
+                        Image: `${jsIcon}`
+                    }
+                ],
+            },
 
         ]
     }
 
 
     render() {
-        const projects = this.state.projects.map((project, i) => (
+        const projects = this.state.projects.map((project, j) => (
             <ProjectCard
                 projects={project}
-                key={i}
+                key={j}
             />
         ))
         return (
