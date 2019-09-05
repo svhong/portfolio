@@ -10,7 +10,6 @@ class TopMenu extends Component {
             <div className="ui menu top-menu">
                 <Link to="/" className="logo-container header item"><img src={myLogo} alt="SH" /></Link>
                 <Link to="/projects" className="item">Projects</Link>
-                <Link to="/contact" className="item">About</Link>
             </div>
         )
     }

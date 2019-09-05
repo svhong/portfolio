@@ -10,7 +10,5 @@ export default function Landing() {
 }
 
 const c1Style = {
-    background: "steelblue",
-    color: "white",
     padding: "1.5rem"
 }
