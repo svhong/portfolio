@@ -6,8 +6,14 @@ export default class ProjectCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            ...props.projects
+            ...props.projects,
+            visible: false
         }
+    }
+
+    async ProjectCardClicked() {
+        await this.setState({ visible: true });
+        this.props.onClick(this.state);
     }
 
     render() {
@@ -38,6 +44,7 @@ export default class ProjectCard extends Component {
                     <div
                         style={props}
                         className="project-card ui card"
+                        onClick={() => { this.ProjectCardClicked(this.state) }}
                     >
                         <div className="image">
                             <img src={this.state.ProjectImageUrl} alt="tetris" />
@@ -50,7 +57,8 @@ export default class ProjectCard extends Component {
                             {icons}
                         </div>
                     </div>
-                )}
+                )
+                }
             </Spring >
         )
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProjectCard from "./ProjectCard";
+import Rodal from "rodal"
 
 
 // importing the icons to put in state
@@ -25,50 +26,14 @@ import blogeditorImage from "../images/blogeditor.PNG";
 import poracImage from "../images/porac.PNG";
 import atosImage from "../images/atos.PNG";
 
+// import CSS
+import 'rodal/lib/rodal.css';
+
 export default class Projects extends Component {
     // Make content changes inside the state
     //refactor with hooks?
     state = {
         projects: [
-            {
-                ProjectTitle: "React Hook Blocks",
-                ProjectImageUrl: `${blocksImage}`,
-                ProjectDescription: "A popular block game project to learn and understand the intricacies of React Hooks.",
-                ProjectTech: [
-                    {
-                        Name: "React Hooks",
-                        Image: `${hooksIcon}`
-                    },
-                    {
-                        Name: "ReactJS",
-                        Image: `${reactIcon}`
-                    },
-                    {
-                        Name: "Styled Components",
-                        Image: `${styledIcon}`
-                    }
-
-                ],
-            },
-            {
-                ProjectTitle: "Bacon API Delivery",
-                ProjectImageUrl: `${baconImage}`,
-                ProjectDescription: "A meaty lorem API delivery service with lightning fast delivery!",
-                ProjectTech: [
-                    {
-                        Name: "ReactJS",
-                        Image: `${reactIcon}`
-                    },
-                    {
-                        Name: "HTML5",
-                        Image: `${htmlIcon}`
-                    },
-                    {
-                        Name: "CSS3",
-                        Image: `${cssIcon}`
-                    },
-                ],
-            },
             {
                 ProjectTitle: "Blog Editor",
                 ProjectImageUrl: `${blogeditorImage}`,
@@ -95,28 +60,30 @@ export default class Projects extends Component {
                         Image: `${bootstrapIcon}`
                     },
                 ],
-            }, {
-                ProjectTitle: "PORAC Insurance",
-                ProjectImageUrl: `${poracImage}`,
-                ProjectDescription: "Fully Responsive reboot of client's outdated website. Made with functional components and served with ExpressJS on Digital Ocean",
+                ProjectUrl: "https://github.com/svhong/blogeditor",
+                ProjectDemo: "https://blogeditor.herokuapp.com"
+            },
+            {
+                ProjectTitle: "React Hook Blocks",
+                ProjectImageUrl: `${blocksImage}`,
+                ProjectDescription: "A popular block game project to learn and understand the intricacies of React Hooks.",
                 ProjectTech: [
                     {
-                        Name: "React",
+                        Name: "React Hooks",
+                        Image: `${hooksIcon}`
+                    },
+                    {
+                        Name: "ReactJS",
                         Image: `${reactIcon}`
                     },
                     {
-                        Name: "Express",
-                        Image: `${expressIcon}`
-                    },
-                    {
-                        Name: "NodeJS",
-                        Image: `${nodeIcon}`
-                    },
-                    {
-                        Name: "Digital Ocean",
-                        Image: `${doIcon}`
+                        Name: "Styled Components",
+                        Image: `${styledIcon}`
                     }
+
                 ],
+                ProjectUrl: "https://github.com/svhong/reactblocks",
+                ProjectDemo: "https://www.google.com"
             },
             {
                 ProjectTitle: "Atos Austin BJJ",
@@ -140,22 +107,109 @@ export default class Projects extends Component {
                         Image: `${jsIcon}`
                     }
                 ],
+                ProjectUrl: "https://github.com/svhong/",
+                ProjectDemo: "https://www.atosaustinbjj.com"
             },
-
-        ]
+            {
+                ProjectTitle: "Bacon API Delivery",
+                ProjectImageUrl: `${baconImage}`,
+                ProjectDescription: "A meaty lorem API delivery service with lightning fast delivery!",
+                ProjectTech: [
+                    {
+                        Name: "ReactJS",
+                        Image: `${reactIcon}`
+                    },
+                    {
+                        Name: "HTML5",
+                        Image: `${htmlIcon}`
+                    },
+                    {
+                        Name: "CSS3",
+                        Image: `${cssIcon}`
+                    },
+                ],
+                ProjectUrl: "https://github.com/svhong/textgenreact",
+                ProjectDemo: "https://www.google.com"
+            },
+            {
+                ProjectTitle: "PORAC Insurance",
+                ProjectImageUrl: `${poracImage}`,
+                ProjectDescription: "Fully Responsive reboot of client's outdated website. Made with functional components and served with ExpressJS on Digital Ocean",
+                ProjectTech: [
+                    {
+                        Name: "React",
+                        Image: `${reactIcon}`
+                    },
+                    {
+                        Name: "Express",
+                        Image: `${expressIcon}`
+                    },
+                    {
+                        Name: "NodeJS",
+                        Image: `${nodeIcon}`
+                    },
+                    {
+                        Name: "Digital Ocean",
+                        Image: `${doIcon}`
+                    }
+                ],
+                ProjectUrl: "https://github.com/svhong/",
+                ProjectDemo: "https://www.poracinsurance.org"
+            },
+        ],
+        visible: false,
+        modalData: {}
     }
 
+    handleClick = (state) => {
+        if (state) {
+            this.setState({
+                visible: true,
+                modalData: state
+            });
+        }
+    }
+
+    handleClose() {
+        this.setState({ visible: false });
+    }
+
+    handleModalClick(url) {
+        window.open(url);
+    }
 
     render() {
         const projects = this.state.projects.map((project, j) => (
             <ProjectCard
                 projects={project}
                 key={j}
+                onClick={this.handleClick}
             />
         ))
+        const project = this.state.modalData;
         return (
             <div className="project-container">
                 {projects}
+                <Rodal
+                    visible={this.state.visible}
+                    onClose={this.handleClose.bind(this)}
+                    closeOnEsc={false}
+                    measure="%"
+                    height={65}
+                    width={70}
+                >
+                    <h1 className="modal-header">{project.ProjectTitle}</h1>
+                    <hr />
+                    <div className="modal-image">
+                        <img src={project.ProjectImageUrl} alt="pic" />
+                    </div>
+                    <hr />
+                    <h4 className="modal-content">{project.ProjectDescription}</h4>
+                    <div className="button-container">
+                        <button className="ui inverted primary button" onClick={() => { this.handleModalClick(project.ProjectUrl) }}> <i className="github icon button-icon"></i> GitHub </button>
+                        <button className="ui inverted green button" onClick={() => { this.handleModalClick(project.ProjectDemo) }}><i className="gamepad icon"></i> Demo</button>
+                    </div>
+                </Rodal>
             </div>
         );
     }
