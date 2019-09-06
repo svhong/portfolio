@@ -17,8 +17,8 @@ class App extends Component {
                     <TopMenu />
                     <Switch>
                         <Route path="/" exact component={Landing} />
-                        <Route path="/projects" component={Projects} />
-                        <Route path="/contact" component={ContactMe} />
+                        <Route path="/projects" exact component={Projects} />
+                        <Route path="/contact" exact component={ContactMe} />
                         <Route component={Landing} />
                     </Switch>
                 </div>
