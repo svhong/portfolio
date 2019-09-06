@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
-
-import Clock from "./Clock";
+import Glitch from "./Glitch";
 
 export default class LandingContent extends Component {
     render() {
@@ -14,14 +13,12 @@ export default class LandingContent extends Component {
                     duration: 500
                 }}>
                 {props => (
-                    <div style={props} className="page-content">
-                        <h1>Hello World</h1>
-                        <p>I'm almost done</p>
-                        <Clock />
+                    <div style={props} className="landing-content">
+                        <Glitch />
                     </div>
                 )}
-
             </Spring>
         )
     }
 }
+

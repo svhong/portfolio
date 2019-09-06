@@ -2,7 +2,6 @@ import React from "react";
 
 export default class Clock extends React.Component {
     state = {
-        date: new Date().toLocaleDateString(),
         time: new Date().toLocaleTimeString()
     }
 
@@ -25,9 +24,8 @@ export default class Clock extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>{this.state.date}</h1>
-                <h1 style={clockStyle}>{this.state.time}</h1>
+            <div style={clockContainer}>
+                <div style={clockStyle}>{this.state.time}</div>
             </div>
 
         )
@@ -37,7 +35,15 @@ export default class Clock extends React.Component {
 const clockStyle = {
     fontFamily: "Pixel",
     display: "inline-block",
-    width: "275px",
-    color: "white",
-    background: "slateblue"
+    maxWidth: "100%",
+    maxHeight: "100%",
+    fontSize: "1.3em",
+}
+
+const clockContainer = {
+    margin: "0.5em",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
 }
