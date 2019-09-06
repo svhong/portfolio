@@ -83,7 +83,7 @@ export default class Projects extends Component {
 
                 ],
                 ProjectUrl: "https://github.com/svhong/reactblocks",
-                ProjectDemo: "https://www.google.com"
+                ProjectDemo: "https://blocks.seanhongdev.com"
             },
             {
                 ProjectTitle: "Atos Austin BJJ",
@@ -129,7 +129,7 @@ export default class Projects extends Component {
                     },
                 ],
                 ProjectUrl: "https://github.com/svhong/textgenreact",
-                ProjectDemo: "https://www.google.com"
+                ProjectDemo: "https://bacon.seanhongdev.com"
             },
             {
                 ProjectTitle: "PORAC Insurance",
