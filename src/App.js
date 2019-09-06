@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, browserHistory } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
+
+import History from "./components/History";
 
 import "./App.scss";
 import TopMenu from "./components/TopMenu";
@@ -10,7 +12,7 @@ import ContactMe from "./components/ContactMe";
 class App extends Component {
     render() {
         return (
-            <Router history={browserHistory}>
+            <Router history={History}>
                 <div className="viewArea">
                     <TopMenu />
                     <Switch>
