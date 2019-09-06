@@ -37,7 +37,7 @@ export default class ProjectCard extends Component {
                     opacity: 1
                 }}
                 config={{
-                    delay: 100,
+                    delay: 250,
                     duration: 500
                 }}>
                 {props => (

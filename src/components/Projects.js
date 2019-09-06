@@ -186,6 +186,7 @@ export default class Projects extends Component {
                 onClick={this.handleClick}
             />
         ))
+
         const project = this.state.modalData;
         return (
             <div className="project-container">

@@ -1,16 +1,12 @@
 import React from "react";
 import LandingContent from "./LandingContent";
+import LandingIcons from "./LandingIcons";
+
 export default function Landing() {
     return (
-
-        <div style={c1Style} className="page-container">
+        <div className="page-container">
             <LandingContent />
+            <LandingIcons />
         </div>
     );
-}
-
-const c1Style = {
-    background: "steelblue",
-    color: "white",
-    padding: "1.5rem"
 }
