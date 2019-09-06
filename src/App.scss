@@ -5,7 +5,12 @@
 
 @font-face {
     font-family: "Rusty Bucket";
-    src:url("./fonts/RustyBucket-Regular.ttf") format("ttf")
+    src:url("./fonts/RustyBucket-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Evolve";
+    src:url("./fonts/MADE\ Evolve\ Sans\ Regular\ EVO\ \(PERSONAL\ USE\).otf") format("opentype")
 }
 
 * {
@@ -16,6 +21,7 @@
 body {
     height: 100vh;
     width: 100vw;
+    transition: 0.5s;
 }
 
 #root, .viewArea {
@@ -61,9 +67,14 @@ body {
 }
 
 .project-card{
+    font-family: "Evolve";
     margin: 1em !important;
     height:50%;
     width: 25%;
+}
+
+.project-card .header {
+    font-family: "Evolve" !important;
 }
 
 .project-card:hover {
@@ -93,7 +104,12 @@ body {
 }
 
 .modal-header {
+    font-family: "Evolve";
     text-align:center;
+}
+
+.modal-content {
+    font-family: "Evolve";
 }
 
 .modal-image {
@@ -121,10 +137,14 @@ body {
     display: flex;
 }
 
+.landing-content {
+    height: 100%;
+}
+
 .landing-icons {
     position: relative;
     display: flex;
-    top: 65vh;
+    bottom: 20vh;
     left: 50%;
     transform: translate(-50%);
     height: 60px;
@@ -143,8 +163,10 @@ body {
 }
 
 .icon-text span {
+    font-family: "Evolve";
+    text-transform: uppercase;
     font-size: 20px;
-    display: inline-flex;
+    display: inline-block;
     position: relative;
     bottom: 35%;
     margin-left: 10px;
@@ -152,7 +174,6 @@ body {
 
 .icon-text {
     height: 100%;
-    border: 3px solid;
     overflow: hidden;
     position: relative;
     padding:5px 15px;
@@ -197,9 +218,39 @@ Css Media Queries -------------------------------------------------------
         font-size: 1em;
     }
     .rodal-dialog {
-        height:85% !important;
+        height:80% !important;
+        top: 3em !important;
     }
     .button-container {
         margin-top:0 !important;
     }
-  }
+    .icon-text span {
+        display:none;
+    }
+}
+
+@media only screen and (max-width:761px){
+    .glitch {
+        font-size: 7em !important;
+    }
+    
+    .jobTitle {
+        font-size: 2em !important;
+        top:25px !important;
+    }
+
+    .icon-text span {
+        display:none;
+    }
+}
+
+@media only screen and (max-width:390px){
+    .glitch {
+        font-size: 6em !important;
+    }
+
+    .jobTitle {
+        font-size: 1.55em !important;
+        top: 15px !important;
+    }
+}

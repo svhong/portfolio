@@ -33,7 +33,7 @@ export default class Clock extends React.Component {
 }
 
 const clockStyle = {
-    fontFamily: "Pixel",
+    fontFamily: "Evolve",
     display: "inline-block",
     maxWidth: "100%",
     maxHeight: "100%",
