@@ -208,12 +208,12 @@ Css Media Queries -------------------------------------------------------
         font-size: 1.3em;
     }
     .modal-content {
-        margin-top: 1em;
-        font-size: 1em;
+        font-size: 2em;
     }
     .rodal-dialog {
         height:80% !important;
         top: 3em !important;
+        width: 80% !important;
     }
     .button-container {
         margin-top:0 !important;
@@ -238,14 +238,37 @@ Css Media Queries -------------------------------------------------------
     }
 }
 
-@media only screen and (max-width:390px){
+@media only screen and (max-width:411px){
     .glitch {
         font-size: 6em !important;
+    }
+
+    .modal-content{
+        font-size: 2.4em;
     }
 
     .jobTitle {
         font-size: 1.55em !important;
         top: 15px !important;
+    }
+    .rodal-dialog {
+        height: 90% !important;
+        width: 80% !important;
+        top: 3em !important;
+        font-size: 1em;
+    }
+    .button-container {
+        padding: 40px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .rodal-dialog {
+        height: 90% !important;
+        width: 80% !important;
+        top: 3em !important;
+        font-size: 1em !important;
     }
 }
 

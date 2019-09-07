@@ -37,6 +37,7 @@ export default class Projects extends Component {
                 ProjectTitle: "Blog Editor",
                 ProjectImageUrl: `${blogeditorImage}`,
                 ProjectDescription: "A blog post editor where user can post and view their blog!",
+                ProjectDetails: "This application was made with Laravel. It utilizes the DraftJS framework for React. User information and data is stored with MySQL and it's styled with Bootstrap4.",
                 ProjectTech: [
                     {
                         Name: "Laravel",
@@ -66,6 +67,7 @@ export default class Projects extends Component {
                 ProjectTitle: "React Hook Blocks",
                 ProjectImageUrl: `${blocksImage}`,
                 ProjectDescription: "A popular block game project to learn and understand the intricacies of React Hooks.",
+                ProjectDetails: "This project was started to get more experience and a broader understanding of hooks. It's styled with Styled Components.",
                 ProjectTech: [
                     {
                         Name: "React Hooks",
@@ -88,6 +90,7 @@ export default class Projects extends Component {
                 ProjectTitle: "Atos Austin BJJ",
                 ProjectImageUrl: `${atosImage}`,
                 ProjectDescription: "Fully Responsive Client's website. With email blasting and clientele database management",
+                ProjectDetails: "Manage, update and fixing Client's website that utilizing the Wix platform. It utilizes advanced features and data is managed with Wix's Corvid.",
                 ProjectTech: [
                     {
                         Name: "Wix",
@@ -113,6 +116,7 @@ export default class Projects extends Component {
                 ProjectTitle: "Bacon API Delivery",
                 ProjectImageUrl: `${baconImage}`,
                 ProjectDescription: "A meaty lorem API delivery service with lightning fast delivery!",
+                ProjectDetails: "Utilizing Bacon Lorem's API, this application is made with ReactJS. Inputs build the query and the data is fetched using axios.",
                 ProjectTech: [
                     {
                         Name: "ReactJS",
@@ -133,7 +137,8 @@ export default class Projects extends Component {
             {
                 ProjectTitle: "PORAC Insurance",
                 ProjectImageUrl: `${poracImage}`,
-                ProjectDescription: "Fully Responsive reboot of client's outdated website. Made with functional components and served with ExpressJS on Digital Ocean",
+                ProjectDescription: "Fully Responsive reboot of client's website.",
+                ProjectDetails: "This application was made with reuseable functional components. The project is served using Node's ExpressJS framework and managed by NodeJS process manager PM2.",
                 ProjectTech: [
                     {
                         Name: "React",
@@ -202,7 +207,7 @@ export default class Projects extends Component {
                     <h1 className="modal-header">{project.ProjectTitle}</h1>
                     <hr />
                     <div className="modal-content">
-                        {project.ProjectDescription}
+                        {project.ProjectDetails}
                     </div>
                     <div className="button-container">
                         <button className="ui inverted primary button" onClick={() => { this.handleModalClick(project.ProjectUrl) }}> <i className="github icon button-icon"></i> GitHub </button>
