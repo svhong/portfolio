@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ProjectCard from "./ProjectCard";
-import Rodal from "rodal"
-
+import Rodal from "rodal";
 
 // importing the icons to put in state
 import reactIcon from "../images/react.png";
@@ -157,6 +156,7 @@ export default class Projects extends Component {
                 ProjectDemo: "https://www.poracinsurance.org"
             },
         ],
+        loading: false,
         visible: false,
         modalData: {}
     }
@@ -195,20 +195,18 @@ export default class Projects extends Component {
                     visible={this.state.visible}
                     onClose={this.handleClose.bind(this)}
                     closeOnEsc={false}
-                    measure="%"
-                    height={65}
-                    width={70}
+                    measure="px"
+                    height={455}
+                    width={500}
                 >
                     <h1 className="modal-header">{project.ProjectTitle}</h1>
                     <hr />
-                    <div className="modal-image">
-                        <img src={project.ProjectImageUrl} alt="pic" />
+                    <div className="modal-content">
+                        {project.ProjectDescription}
                     </div>
-                    <hr />
-                    <h4 className="modal-content">{project.ProjectDescription}</h4>
                     <div className="button-container">
                         <button className="ui inverted primary button" onClick={() => { this.handleModalClick(project.ProjectUrl) }}> <i className="github icon button-icon"></i> GitHub </button>
-                        <button className="ui inverted green button" onClick={() => { this.handleModalClick(project.ProjectDemo) }}><i className="gamepad icon"></i> Demo</button>
+                        <button className="ui inverted green button" onClick={() => { this.handleModalClick(project.ProjectDemo) }}><i className="gamepad icon"></i> Live</button>
                     </div>
                 </Rodal>
             </div>

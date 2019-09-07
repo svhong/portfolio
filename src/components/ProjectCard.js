@@ -50,7 +50,7 @@ export default class ProjectCard extends Component {
                             <img src={this.state.ProjectImageUrl} alt="tetris" />
                         </div>
                         <div className="content">
-                            <div className="header">{this.state.ProjectTitle}</div>
+                            <div className="ui centered header">{this.state.ProjectTitle}</div>
                             <div className="description">{this.state.ProjectDescription}</div>
                         </div>
                         <div className="extra content icon-collection">

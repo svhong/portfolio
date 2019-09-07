@@ -10,7 +10,7 @@ class TopMenu extends Component {
         return (
             <div className="ui fixed menu top-menu">
                 <Link to="/" className="logo-container header item"><img src={myLogo} alt="SH" /></Link>
-                <Link to="/projects" className="item" style={evolveStyles}>Projects</Link>
+                <Link to="/projects" className="item" >Projects</Link>
                 <div className="right menu">
                     <div className="ui right aligned clock-container">
                         <Clock />
@@ -23,7 +23,3 @@ class TopMenu extends Component {
 
 export default TopMenu;
 
-const evolveStyles = {
-    fontFamily: "Evolve",
-    textTransform: "uppercase"
-}

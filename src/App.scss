@@ -7,10 +7,9 @@
     font-family: "Rusty Bucket";
     src:url("./fonts/RustyBucket-Regular.ttf") format("truetype")
 }
-
 @font-face {
-    font-family: "Evolve";
-    src:url("./fonts/MADE\ Evolve\ Sans\ Regular\ EVO\ \(PERSONAL\ USE\).otf") format("opentype")
+    font-family: "Katulamp";
+    src:url("./fonts/KATULAMP.OTF") format("opentype")
 }
 
 * {
@@ -73,15 +72,11 @@ body {
 }
 
 .project-card{
-    font-family: "Evolve";
     margin: 1em !important;
     height:50%;
     width: 25%;
 }
 
-.project-card .header {
-    font-family: "Evolve" !important;
-}
 
 .project-card:hover {
     cursor: pointer;
@@ -110,33 +105,26 @@ body {
 }
 
 .modal-header {
-    font-family: "Evolve";
     text-align:center;
 }
 
-.modal-content {
-    font-family: "Evolve";
-}
-
-.modal-image {
-    margin: 1em 0;
-    height: 40%;
-    text-align: center;
-}
-
-.modal-image > img {
-    max-width: 100%;
-    max-height: 100%;
+.modal-url {
+    text-align:center;
 }
 
 .modal-content{
-    text-align:center;
+    font-family: "KATULAMP";
+    margin: 5px 0 0 20px;
+    font-size: 40px;
+    line-height: 1.2em;
 }
 
 .button-container {
-    margin-top: 2.5em;
-    display: flex;
-    justify-content:center;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
 }
 
 .clock-container {
@@ -169,7 +157,6 @@ body {
 }
 
 .icon-text span {
-    font-family: "Evolve";
     text-transform: uppercase;
     font-size: 20px;
     display: inline-block;
@@ -205,12 +192,13 @@ body {
 }
 
 .icon-text:hover {
-
     &:after {
     left: 120%;
     transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
     }
 }
+
+
 /*
 Css Media Queries -------------------------------------------------------
 */
@@ -260,3 +248,7 @@ Css Media Queries -------------------------------------------------------
         top: 15px !important;
     }
 }
+
+/*
+CSS Keyframes --------------------------------------------
+*/
