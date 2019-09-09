@@ -4,7 +4,7 @@ import gitIcon from "../images/git.png";
 import linkedIcon from "../images/linkedin.png";
 import resumeIcon from "../images/resume.png";
 
-import resumeFile from "../assets/Sean Hong Resume.pdf"
+import resumeFile from "../assets/Sean Hong's Technical Resume.pdf"
 
 export default function LandingIcon() {
     return (
