@@ -13,7 +13,7 @@ export default function LandingIcon() {
                 <img src={gitIcon} alt="git" />
                 <span>GitHub</span>
             </a>
-            <a href={resumeFile} target="_blank" download rel="noopener noreferrer" className="icon-text">
+            <a href={resumeFile} target="_blank" rel="noopener noreferrer" className="icon-text">
                 <img src={resumeIcon} alt="linkedin" />
                 <span>Resume</span>
             </a>
