@@ -8,7 +8,7 @@ export default function Glitch() {
             <div className="glitch" data-text="Sean Hong">Sean Hong</div>
             <div className="jobTitle">
                 software engineer
-                            </div>
+            </div>
         </div>
     )
 }
