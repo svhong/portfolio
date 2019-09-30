@@ -24,6 +24,7 @@ import baconImage from "../images/bacon.PNG";
 import blogeditorImage from "../images/blogeditor.PNG";
 import poracImage from "../images/porac.PNG";
 import atosImage from "../images/atos.PNG";
+import vjjImage from "../images/vjj.PNG";
 
 // import CSS
 import 'rodal/lib/rodal.css';
@@ -160,6 +161,32 @@ export default class Projects extends Component {
                 ProjectUrl: "https://github.com/svhong/",
                 ProjectDemo: "https://www.poracinsurance.org"
             },
+            {
+                ProjectTitle: "Veteran's Jiu-Jitsu",
+                ProjectImageUrl: `${vjjImage}`,
+                ProjectDescription: "Fully Responsive Client's website with product store, and clientele database management.",
+                ProjectDetails: "Updated and re-designed layout, added product store and payment system. Includes subscriber email blasting and log in functionality.",
+                ProjectTech: [
+                    {
+                        Name: "Wix",
+                        Image: `${wixIcon}`
+                    },
+                    {
+                        Name: "Html5",
+                        Image: `${htmlIcon}`
+                    },
+                    {
+                        Name: "CSS3",
+                        Image: `${cssIcon}`
+                    },
+                    {
+                        Name: "JavaScript",
+                        Image: `${jsIcon}`
+                    }
+                ],
+                ProjectUrl: "https://github.com/svhong/",
+                ProjectDemo: "https://www.veteransjiujitsu.com/"
+            }
         ],
         loading: false,
         visible: false,
