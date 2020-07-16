@@ -8,23 +8,10 @@ import styledIcon from "../images/styledcomponents.png";
 import hooksIcon from "../images/hooks.png";
 import htmlIcon from "../images/html.png";
 import cssIcon from "../images/css.png";
-import laravelIcon from "../images/laravel.png";
-import bootstrapIcon from "../images/bootstrap.png";
-import phpIcon from "../images/php.png";
-import mysqlIcon from "../images/mysql.png";
-import nodeIcon from "../images/node.png";
-import expressIcon from "../images/express.png";
-import doIcon from "../images/do.png";
-import jsIcon from "../images/js.png";
-import wixIcon from "../images/wix.png";
 
 // importing images
 import blocksImage from "../images/blocks.PNG";
 import baconImage from "../images/bacon.PNG";
-import blogeditorImage from "../images/blogeditor.PNG";
-import poracImage from "../images/porac.PNG";
-import atosImage from "../images/atos.PNG";
-import vjjImage from "../images/vjj.PNG";
 
 // import CSS
 import 'rodal/lib/rodal.css';
@@ -34,36 +21,6 @@ export default class Projects extends Component {
     //refactor with hooks?
     state = {
         projects: [
-            {
-                ProjectTitle: "Blog Editor",
-                ProjectImageUrl: `${blogeditorImage}`,
-                ProjectDescription: "A blog post editor where user can post and view their blog!",
-                ProjectDetails: "This application was made with Laravel. It utilizes the DraftJS framework for React. User information and data is stored with MySQL and it's styled with Bootstrap4.",
-                ProjectTech: [
-                    {
-                        Name: "Laravel",
-                        Image: `${laravelIcon}`
-                    },
-                    {
-                        Name: "PHP7",
-                        Image: `${phpIcon}`
-                    },
-                    {
-                        Name: "MySQL DataBase",
-                        Image: `${mysqlIcon}`
-                    },
-                    {
-                        Name: "ReactJS",
-                        Image: `${reactIcon}`
-                    },
-                    {
-                        Name: "Bootstrap 4",
-                        Image: `${bootstrapIcon}`
-                    },
-                ],
-                ProjectUrl: "https://github.com/svhong/blogeditor",
-                ProjectDemo: "https://blogeditor.herokuapp.com"
-            },
             {
                 ProjectTitle: "React Hook Blocks",
                 ProjectImageUrl: `${blocksImage}`,
@@ -88,32 +45,6 @@ export default class Projects extends Component {
                 ProjectDemo: "https://blocks.seanhongdev.com"
             },
             {
-                ProjectTitle: "Atos Austin BJJ",
-                ProjectImageUrl: `${atosImage}`,
-                ProjectDescription: "Fully Responsive Client's website. With email blasting and clientele database management",
-                ProjectDetails: "Manage, update and fixing Client's website that utilizing the Wix platform. It utilizes advanced features and data is managed with Wix's Corvid.",
-                ProjectTech: [
-                    {
-                        Name: "Wix",
-                        Image: `${wixIcon}`
-                    },
-                    {
-                        Name: "Html5",
-                        Image: `${htmlIcon}`
-                    },
-                    {
-                        Name: "CSS3",
-                        Image: `${cssIcon}`
-                    },
-                    {
-                        Name: "JavaScript",
-                        Image: `${jsIcon}`
-                    }
-                ],
-                ProjectUrl: "https://github.com/svhong/",
-                ProjectDemo: "https://www.atosaustinbjj.com"
-            },
-            {
                 ProjectTitle: "Bacon API Delivery",
                 ProjectImageUrl: `${baconImage}`,
                 ProjectDescription: "A meaty lorem API delivery service with lightning fast delivery!",
@@ -135,58 +66,6 @@ export default class Projects extends Component {
                 ProjectUrl: "https://github.com/svhong/textgenreact",
                 ProjectDemo: "https://bacon.seanhongdev.com"
             },
-            {
-                ProjectTitle: "PORAC Insurance",
-                ProjectImageUrl: `${poracImage}`,
-                ProjectDescription: "Fully Responsive reboot of client's website.",
-                ProjectDetails: "This application was made with reuseable functional components. The project is served using Node's ExpressJS framework and managed by NodeJS process manager PM2.",
-                ProjectTech: [
-                    {
-                        Name: "React",
-                        Image: `${reactIcon}`
-                    },
-                    {
-                        Name: "Express",
-                        Image: `${expressIcon}`
-                    },
-                    {
-                        Name: "NodeJS",
-                        Image: `${nodeIcon}`
-                    },
-                    {
-                        Name: "Digital Ocean",
-                        Image: `${doIcon}`
-                    }
-                ],
-                ProjectUrl: "https://github.com/svhong/",
-                ProjectDemo: "https://www.poracinsurance.org"
-            },
-            {
-                ProjectTitle: "Veteran's Jiu-Jitsu",
-                ProjectImageUrl: `${vjjImage}`,
-                ProjectDescription: "Fully Responsive Client's website with product store, and clientele database management.",
-                ProjectDetails: "Updated and re-designed layout, added product store and payment system. Includes subscriber email blasting and log in functionality.",
-                ProjectTech: [
-                    {
-                        Name: "Wix",
-                        Image: `${wixIcon}`
-                    },
-                    {
-                        Name: "Html5",
-                        Image: `${htmlIcon}`
-                    },
-                    {
-                        Name: "CSS3",
-                        Image: `${cssIcon}`
-                    },
-                    {
-                        Name: "JavaScript",
-                        Image: `${jsIcon}`
-                    }
-                ],
-                ProjectUrl: "https://github.com/svhong/",
-                ProjectDemo: "https://www.veteransjiujitsu.com/"
-            }
         ],
         loading: false,
         visible: false,
